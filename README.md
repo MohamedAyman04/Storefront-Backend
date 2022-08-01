@@ -46,16 +46,16 @@
 
 ## enviromet variables
 
-POSTGRES_HOST=localhost
-POSTGRES_DB=data
-POSTGRES_USER=imac
-POSTGRES_PASSWORD=pass123
-POSTGRES_TEST_DB=testing_data
-POSTGRES_PORT=5432
-ENV=unknown
-BCRYPT_PASSWORD=your-secret-password
-SALT_ROUNDS=10
-TOKEN_SECRET=secret-token
+- POSTGRES_HOST=localhost
+- POSTGRES_DB=data
+- POSTGRES_USER=imac
+- POSTGRES_PASSWORD=pass123
+- POSTGRES_TEST_DB=testing_data
+- POSTGRES_PORT=5432
+- ENV=unknown
+- BCRYPT_PASSWORD=your-secret-password
+- SALT_ROUNDS=10
+- TOKEN_SECRET=secret-token
 
 ## Resources used
 
