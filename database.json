@@ -1,0 +1,16 @@
+{
+  "dev": {
+    "driver": "pg",
+    "host": "localhost",
+    "database": "data",
+    "user": "imac",
+    "password": "pass123"
+  },
+  "test": {
+    "driver": "pg",
+    "host": "localhost",
+    "database": "testing_data",
+    "user": "imac",
+    "password": "pass123"
+  }
+}
