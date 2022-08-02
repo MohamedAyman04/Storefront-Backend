@@ -66,7 +66,7 @@ const verifyAuthToken = (
 
 // exporting a function to be used in server and adding it's neccessary endpoints
 export const products_routes = (app: Application): void => {
-  app.get("/products", verifyAuthToken, index);
-  app.get("/products/:id", verifyAuthToken, show);
+  app.get("/products", index);
+  app.get("/products/:id", show);
   app.post("/products", verifyAuthToken, create);
 };
