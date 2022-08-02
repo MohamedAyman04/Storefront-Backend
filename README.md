@@ -2,12 +2,43 @@
 
 ## How to setup and connect to the database
 
+- run db-migrate up to create the tables
 - go to the dist directory
 - type in the terminal node server.js
+- ther server will be running on http://localhost:4444
+
+### the token
+
+- to use the token provided simply when you create the user you will get a token copy this token to the Authentication tab in postman and make sure you select Bearer Token
+
+### users
+
+- Create: to create a new user make a post request to http://localhost:4444/users and provide three things (first_name, last_name, password) of the user in the request body. finally, you will reseve a token for future uses.
+- Index: to see all the users make a get request to http://localhost:4444/users and you will get all the users data [must provide the token]
+- Show: to see a specific user simply make a get request to http://localhost:4444/users/:id in the id insert the spicified user id to return him [mush provide a token]
+- Authenticate: to authenticate a user make a post request to http://localhost:4444/authenticate and provide (first_name, last_name, password) of the user in the request body. finally, if the data mathes a user it will be returned
+
+### products
+
+- Create: to create a new product make a post request to http://localhost:4444/products and provide two things (name, price) of the product in the request body [must provide a token]
+- Index: to see all products make a get request to http://localhost:4444/products and you will get all the products
+- Show: to see a spicific product simply make a get request to http://localhost:4444/products/:id in the id insert the spicified product id to return it
+
+### orders
+
+- Create: to create a new order make a post request to http://localhost:4444/orders and provide two things (status, user_id) of the order in the request body [must provide a token]
+- Index: to to see all orders make a get request to http://localhost:4444/orders and you will get all the orders [must provide a token]
+- Show: to see a spicific order simply make a get request to http://localhost:4444/orders/:id in the id insert the spicified order id to return it
+- addProduct: to add a new product to your orders make a post request to http://localhost:4444/orders/:id/products where the id is the order id and you will provide (quantity, product id) in the request body [must provide a token]
+
+### database
+
 - you must have a database nammed data and testing_data for testing
 - once the server is started you are connected to the databse
+
+### testing database
+
 - to test the database first run (npm run build) then (npm run clear) then (npm run test)
-- to use the token provided simply when you create the user you will get a token copy this token to the Authentication tab in postman and make sure you select Bearer Token
 
 ## Ports the backend and database are running on
 

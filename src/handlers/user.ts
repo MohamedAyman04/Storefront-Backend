@@ -15,13 +15,6 @@ const { TOKEN_SECRET } = process.env;
 const index = async (req: Request, res: Response): Promise<void> => {
   try {
     const users = await user.index();
-    try {
-      jwt.verify(req.body.token, TOKEN_SECRET as unknown as Secret);
-    } catch (error) {
-      res.status(401);
-      res.send(`Invaled token ${error}`);
-      return;
-    }
     console.log(users);
     res.json(users);
   } catch (error) {
@@ -89,7 +82,6 @@ const verifyAuthToken = (
     );
     next();
   } catch (error) {
-    res.status(401);
     res.send(`invalid token ${error}`);
     return;
   }

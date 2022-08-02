@@ -58,7 +58,6 @@ const verifyAuthToken = (
     );
     next();
   } catch (error) {
-    res.status(401);
     res.send(`invalid token ${error}`);
     return;
   }
